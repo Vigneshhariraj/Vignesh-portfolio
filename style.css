@@ -509,4 +509,38 @@ nav .fa-solid{
         font-size: 16px;
     }
  }
- /*-----------------------media query for 500px------------------*/
+ /*-----------------------media query for 1080px------------------*/
+@media only screen and (max-width:1080px){
+    #header{
+        background-image: url(2background.png);
+    }
+    .header-text{
+        margin-top:82px;
+        font-size: 30px; 
+    }
+    .header-text h1{
+        font-size: 45px;
+
+    }
+    .about-col-1 img{
+        margin-top: 45px;
+        width: 100%;
+        border-radius: 15px;
+    }
+    nav ul li{
+        margin: 10px 8px;
+    }
+    .services-list{
+        grid-template-columns: 1fr;
+    }
+    .work-list{
+        grid-template-columns: 1fr;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+        margin-left: 30px;
+    }
+    .copyright{
+        font-size: 16px;
+    }
+ }
