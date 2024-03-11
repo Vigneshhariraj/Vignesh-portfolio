@@ -75,7 +75,6 @@ nav ul li a::after{
     position: absolute;
     left: 0;
     bottom: -6px;
-
 }
 nav ul li a:hover::after{
     width: 100%;
@@ -94,14 +93,12 @@ nav ul li a:hover::after{
 }
 /* preloader */
 #preloader {
-    background: #fff url(preloader.gif) no-repeat center center;
-    background-size: 10%;
+    background: #080808 url(preloader.gif) no-repeat center center;
     height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 100;
   }
-  
 /*-----------------about me------------*/
 #about{
     padding: 80px 0;
@@ -112,7 +109,6 @@ nav ul li a:hover::after{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .about-col-1{
     flex-basis: 35%;
 }
@@ -289,7 +285,6 @@ nav ul li a:hover::after{
  }
  .buttn:hover{
     background: #ff004f;
-
  }
  /*-----------------------------------contact---------------*/
  .contact-left{
@@ -355,11 +350,68 @@ nav ul li a:hover::after{
     font-weight: 300;
     margin-top: 20px;
  }
+ /*-----------------------media query for phone------------------*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    /* Styles for phones */
+    #header{
+        background-image: url(mobile.png);
+    }
+    .header-text{
+        margin-top:82px;
+        font-size: 30px; 
+    }
+    .header-text h1{
+        font-size: 45px;
+
+    }
+    .about-col-1 img{
+        margin-top: 0;
+        width: 100%;
+        border-radius: 15px;
+    }
+    nav .fa-solid{
+        display: block;   
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -150px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .services-list{
+        grid-template-columns: 1fr;
+    }
+    .work-list{
+        grid-template-columns: 1fr;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 16px;
+    }
+}
  /*-----------------------media query for 768px------------------*/
-nav .fa-solid{
+ nav .fa-solid{
     display: none;   
 }
- @media only screen and (max-width:768px){
+ @media only screen and (min-width: 481px) and (max-width:768px){
     #header{
         background-image: url(500-2.png);
     }
@@ -409,64 +461,6 @@ nav .fa-solid{
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
-        margin-left: 30px;
-    }
-    .copyright{
-        font-size: 16px;
-    }
- }
- /*-----------------------media query for 425px------------------*/
- @media only screen and (max-width:425px){
-    #header{
-        background-image: block;
-    }
-    .header-text{
-        margin-top:82px;
-        font-size: 30px; 
-    }
-    .header-text h1{
-        font-size: 45px;
-
-    }
-    .about-col-1 img{
-        margin-top: 0;
-        width: 100%;
-        border-radius: 15px;
-    }
-    nav .fa-solid{
-        display: block;   
-        font-size: 25px;
-    }
-    nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -150px;
-        width: 150px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: 0.5s;
-    }
-    nav ul li{
-        display:block;
-        margin: 25px;
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    .services-list{
-        grid-template-columns: 1fr;
-    }
-    .work-list{
-        grid-template-columns: 1fr;
-    }
-    .contact-left, .contact-right{
-        flex-basis: 100%;
-        margin-left: 30px;
     }
     .copyright{
         font-size: 16px;
@@ -474,10 +468,7 @@ nav .fa-solid{
  }
 /*-----------------------media query for 1024px------------------*/
 
-@media only screen and (max-width:1024px){
-    #header{
-        background-image: url(2background.png);
-    }
+@media only screen and (max-width:1024px)and (max-width:1080px){
     .header-text{
         margin-top:82px;
         font-size: 30px; 
@@ -494,52 +485,4 @@ nav .fa-solid{
     nav ul li{
         margin: 10px 8px;
     }
-    .services-list{
-        grid-template-columns: 1fr;
-    }
-    .work-list{
-        grid-template-columns: 1fr;
-    }
-    .contact-left, .contact-right{
-        flex-basis: 100%;
-        margin-left: 30px;
-    }
-    .copyright{
-        font-size: 16px;
-    }
- }
- /*-----------------------media query for 1080px------------------*/
-@media only screen and (max-width:1080px){
-    #header{
-        background-image: url(2background.png);
-    }
-    .header-text{
-        margin-top:82px;
-        font-size: 30px; 
-    }
-    .header-text h1{
-        font-size: 45px;
-
-    }
-    .about-col-1 img{
-        margin-top: 45px;
-        width: 100%;
-        border-radius: 15px;
-    }
-    nav ul li{
-        margin: 10px 8px;
-    }
-    .services-list{
-        grid-template-columns: 1fr;
-    }
-    .work-list{
-        grid-template-columns: 1fr;
-    }
-    .contact-left, .contact-right{
-        flex-basis: 100%;
-        margin-left: 30px;
-    }
-    .copyright{
-        font-size: 16px;
-    }
- }
+}
