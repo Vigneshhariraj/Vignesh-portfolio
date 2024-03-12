@@ -196,6 +196,17 @@
         sidemenu.style.right ="-200px";
     }
 </script>
+<!---------------------->
+<script>
+    document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // 123 is the keyCode for F12
+        return false; // Prevent F12
+    }
+};
+document.oncontextmenu = function() {
+    return false;
+};
+</script>
 <!---------------->
 </body>
 </html>
