@@ -196,7 +196,7 @@
         sidemenu.style.right ="-200px";
     }
 </script>
-<!---------------------->
+<!----------block for inspect ------------>
 <script>
     document.onkeydown = function(e) {
     if (e.keyCode == 123) { // 123 is the keyCode for F12
@@ -206,6 +206,11 @@
 document.oncontextmenu = function() {
     return false;
 };
+window.addEventListener('keydown', function(e) {
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 73) { // 73 is the keyCode for 'I'
+        e.preventDefault(); // Prevent Control + Shift + I
+    }
+});
 </script>
 <!---------------->
 </body>
